@@ -23,8 +23,10 @@ public class SoftwareEngineerController {
          return engineeringService.findAllEngineers();
     }
     @PostMapping
-    public void addSoftwareDeveloper( @RequestBody  SoftwareEngineer softwareEngineer){
+    public SoftwareEngineer addSoftwareDeveloper(@RequestBody  SoftwareEngineer softwareEngineer){
         engineeringService.create(softwareEngineer);
+        return softwareEngineer;
+
     }
 
 
